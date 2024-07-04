@@ -6,14 +6,16 @@ function MeetupDetails() {
   return <MeetupDetail />;
 }
 
-export async function getStatisPaths() {
+export async function getStaticPaths() {
   return {
     fallback: false,
-    path: [
+    paths: [
       {
         params: {
           meetupId: "m1",
         },
+      },
+      {
         params: {
           meetupId: "m2",
         },
